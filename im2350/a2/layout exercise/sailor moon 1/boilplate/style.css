@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+
+}
+:root{
+    --color1: rgb(255, 0, 98);
+    --color2: rgb(231, 130, 147);
+    --color3: blue;
+    --color4: rgb(0, 255, 170);
+    --border: double 2rem var(--color3)
+}
+
+.header {
+    color:white;
+    background-color: aquamarine;
+    position:sticky;
+    top:0;
+    border:solid rgb(48, 130, 155) 0.75rem;
+    text-align: center;
+    font-weight: 900;
+    z-index: 3;
+}
+.box {
+    border: solid 0.75rem black;
+    background-color: white;
+}
+#container0 {
+    height:310rem;
+    width:220rem;
+    margin:0 auto;
+    display:flex;
+    flex-flow: column nowrap;
+    gap:90rem;
+    position: relative;
+    background:radial-gradient(circle at left center, grey 0%, white 70%);
+}
+/* #img {
+    background: radial-gradient(0deg, rgb(242, 15, 15), rgb(0, 0, 0));
+    width: 50%;
+    height:50%;
+    position:absolute;
+} */
+#box1 {
+    display:flex;
+    height:38%;
+    flex-flow:nowrap;
+    position:absolute;
+    gap: 2.5rem;
+    justify-content: baseline;
+}
+#box1-1 {
+    border-top: transparent;
+    border-left: transparent;
+    height:100rem;
+    width:90rem;
+    top: 0;
+}
+#box1-2 {
+    height:87rem;
+    width: 30rem;
+    margin-top: 27rem;
+}
+#box1-3 {
+    height: 98rem;
+    width: 75rem;
+    margin-top: 27rem;
+}
+#box2 {
+    display: flex;
+    height:40%;
+    flex-flow: nowrap;
+    position:absolute;
+    bottom: 0;
+    gap: 2.5rem;
+    justify-content: last baseline;
+}
+#box2-1 {
+    height:120rem;
+    width: 90rem;
+    border-bottom: transparent;
+    align-self: flex-end;
+}
+#box2-2 {
+    height:120rem;
+    width:30rem;
+    border-bottom: transparent;
+    align-self: flex-end;
+}
+#box2-3 {
+    height:110rem;
+    width: 75rem;
+    align-self: flex-end;
+    border-bottom: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle at left top, white 0%,blue 25%, white 50%,blue 80%, white 100%);
+    border: transparent;
+    color:transparent;
+}
+#innerbox {
+    align-self: flex-end;
+    background: white;
+    height: 108rem;
+    width: 71rem;
+}
+

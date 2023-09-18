@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+
+}
+:root{
+    --color1: rgb(255, 0, 98);
+    --color2: rgb(231, 130, 147);
+    --color3: blue;
+    --color4: rgb(0, 255, 170);
+    --color5: black;
+    --border: solid 0.05rem var(--color5)
+}
+
+.header {
+    position:sticky;
+    top:0;
+    font-size: xx-large;
+    font-weight: 900;
+    background-color: blue;
+    color: aliceblue;
+    border: rgb(255, 242, 0) solid 0.75rem;
+    z-index: 100;
+    text-align: center;
+}
+
+.box {
+    border: var(--border);
+}
+#container0{
+    display: flex;
+    flex-flow:column nowrap;
+    height: 310rem;
+    width:220rem;
+    gap:5rem;
+    margin:0 auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+#container {
+    display: flex;
+    flex:2.7 0;
+    flex-flow: nowrap;
+    gap:2.5rem;
+}
+
+#container1 {
+    display: flex;
+    gap: 2.5rem;
+    flex: 2 0;
+}
+
+#box1 {
+    display:flex;
+    flex-flow:column;
+    justify-content: baseline;
+    align-content: center;
+    position:relative;
+    flex:1.2 0;
+}
+#box1-1 {
+    background-color: rgb(255, 255, 255);
+    height:75rem;
+    width:65rem;
+    position:absolute;
+    z-index: 2;
+    order:2;
+    bottom:0rem;
+    align-self: first baseline ;
+}
+#box1-2 {
+    background-color: rgb(255, 255, 255);
+    height:95rem;
+    width: 65rem;
+    position:relative;
+    z-index: 0;
+    order:1;
+    top:0;
+    align-self: last baseline;
+}
+#box2 {
+    display: flex;
+    flex-flow:column;
+    justify-content: baseline;
+    position:relative;
+    flex: 1.5 0;
+}
+#box2-1 {
+    position:absolute;
+    right: 0;
+    height: 75rem;
+    width: 65rem;
+    z-index: 0;
+    background-color: white;
+}
+#box2-2 {
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    height: 90rem;
+    width: 75rem;
+    z-index: 2;
+    background-color: white;
+
+}
+#box3 {
+    flex:1 0;
+}
+#box4 {
+    flex: 1 0;
+}
+#box5 {
+    display: flex;
+    justify-content:baseline;
+    position:relative;
+    flex:2.3 0;
+}
+#box5-1 {
+    position: absolute;
+    left:0;
+    bottom:0;
+    z-index: 2;
+    height: 75rem;
+    width: 71rem;
+    background-color: white;
+
+}
+#box5-2 {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    width: 115rem;
+    height: 85rem;
+    background-color: white;
+
+}
+#box6 {
+    flex: 1 0;
+}

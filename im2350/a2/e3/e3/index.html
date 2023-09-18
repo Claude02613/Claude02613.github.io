@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<!-- 
+
+  PROVIDE MEANINGFUL FEEDBACK TO THE FOLLOWING ELEMENTS:
+  1) <button> with the id of load-link on the loading page (index.html)
+  2) <div> with the id of load-throbber on the loading page (index.html)
+  3) <li>s inside of the <ol> inside of the <nav> on the information page (hosono.html)
+  4) <button> with the id of mode-button on the information page (hosono.html)
+
+-->
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <title>Loading Page</title>
+
+    <script src="./fakeLoad.js" defer></script>
+
+
+  </head>
+<!-- BODY -->
+<body id="load-body">
+   
+<pre class="title" tabindex="0" id="Homme">
+
+<span id="name">Haruomi Hosono</span></pre>
+<button id="loadLink" onclick="loadPageAfterDelay(10000, './hosono.html')">Click to Load Page</button>
+
+<!-- BODY -->
+  
+      <!--
+        Typically I'd use an <a> here but as we're faking a load time I'm using a <button> instead.  If it was an 
+        <a> I would leave off the target attribute so that it would redirect the current tab.
+      -->
+      <!--
+        The function loadPageAfterDelay() is declared in the file fakeLoad.js - it takes a number value that sets the 
+        amount of time it takes in ms and a url to redirect to.
+      -->
+      
+      <!--
+        This is a div we're using for the throbber - if we wanted to do a % based loading bar there is an element 
+        called <progress> but as this one is just indicating a wait rather than providing direct feedback on progress I've 
+        opted for using a <div>.
+      -->
+
+  <!-- animation background test -->
+  <div id="AniContainer">
+
+      <div class="bars" id="e1"></div>
+      <div class="bars" id="e2"></div>
+      <div class="bars" id="e3"></div>
+      <div class="bars" id="e4"></div>
+      <div class="bars" id="e5"></div>
+      <div class="bars" id="e6"></div>
+      <div class="bars" id="e7"></div>
+      <div class="bars" id="e8"></div>
+      <div class="bars" id="e9"></div>
+      <div class="bars" id="e0"></div>
+      <div class="bars" id="e11"></div>
+      <div class="bars" id="e12"></div>
+      <div class="bars" id="e13"></div>
+      <div class="bars" id="e14"></div>
+      <div class="bars" id="e15"></div>
+      <div class="bars" id="e16"></div>
+      <div class="bars" id="e17"></div>
+      <div class="bars" id="e18"></div>
+      <div class="bars" id="e19"></div>
+      <div class="bars" id="e00"></div>
+      <div class="bars" id="e21"></div>
+      <div class="bars" id="e22"></div>
+   
+  </div>
+  <!-- animation background test -->
+
+    </body>
+
+
+</html>
