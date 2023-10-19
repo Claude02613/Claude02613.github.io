@@ -1,0 +1,42 @@
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+
+}
+body{
+  /* responsive to the clientX (possibly have another layer on the top of that and controlled by ClientY) */
+    background: rgb(100, 100, 100);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    z-index: -10;
+    /* used to make the background response as different color but not only greyscale color, but it will sometime make the effects hard to see */
+    transition: background-color 100ms;
+}
+body::before{
+  content: "click once and move the cursor to interact :)";
+  position: absolute;
+  color: white;
+  text-shadow: rgb(115, 0, 255) 0 0 2rem;
+  bottom: 30%;
+  z-index: 0;
+}
+canvas {
+  background: rgba(128, 106, 255, 0);
+  position: absolute;
+  /* add saturate and contrast filter to enhance the visual effect as the flow fluid I made is 
+  just bunch of short lines */
+  filter: url('#filter') saturate(60%) contrast(2);
+  /* this z-index was be used to organize the layer as I was set a responsive background (random letters fill up the background and the letter will change while the cursor moving) 
+  However,since the flow fluid effects is already hard to handle in some of the laptop, I delete them to optimize the fluid effects*/
+  z-index: -5;
+  transition:filter 200ms;
+}
+svg{
+    display: none;
+    z-index: 10;
+}
+

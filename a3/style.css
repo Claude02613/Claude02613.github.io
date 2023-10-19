@@ -1,0 +1,72 @@
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+
+}
+body{
+    background: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    z-index: -10;
+    transition: background-color 100ms;
+}
+canvas {
+  background: rgba(128, 106, 255, 0);
+  position: absolute;
+  filter: url('#filter');
+  z-index: -5;
+}
+svg{
+    display: none;
+    z-index: 10;
+}
+
+/* was trying to applying a gradient and mask(track the mouse movement to make the visual distortion
+but the tracking part not work, so I might just stick with the svg and canvas rn */
+/* .card-track {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .card-wrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .card-letters {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.938);
+    font-size: var(--font-size);
+    font-weight: 500;
+    word-wrap: break-word;
+    opacity: 0;
+    transition: opacity 400ms;
+    scale: 1.03;
+    filter: url('#filter');
+    z-index: -2.5;
+  }
+  
+  .card:hover .card-letters {
+    opacity: 0.5;
+  }
+  
+  @media(max-width: 600px) {
+    :root {
+      --card-size: 340px;
+    }
+    
+    .card {
+      border-radius: 1rem;
+    }
+  } */

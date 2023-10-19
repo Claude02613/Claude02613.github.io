@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+     <head>
+        
+        <meta Charset="utf-8">
+        <meta Name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+           A3 interactive media Claude
+        </title>    
+        
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer> </script>
+
+     </head>
+
+     <body>
+<!-- the audio -->
+      <audio id="audio" autoplay></audio>
+<!-- the filter -->
+      <svg>
+         <filter id="filter" x="0" y="0" width="100%" height="100%" >
+           <feOffset dx="0" dy="0" result="noise" in="SourceGraphic" />
+           <!-- as the flow fluid I made is just bunch of lines I set scale of displacement map to a high value, the lower the baseFrequency
+         which can blend the straight lines while they rotating, it can improve the glitch-style visual in a way, and also make it more like a 3D pattern but not flat 
+         2D lines-->
+           <feTurbulence id="F" baseFrequency="0.02" 
+                          numOctaves="5" 
+                          result="turbulence" 
+                          type="fractalNoise" />
+           <feDisplacementMap scale="20" in="noise" in2="turbulence" xChannelSelector="R" yChannelSelector="G" />
+<!-- tried adding light to the filter but the results seems not as what I thought--very hard to see the effects on the filter -->
+      <!-- <feDiffuseLighting in="noise" lighting-color='white' surfaceScale='20'>
+            <feDistantLight azimuth='90' elevation='90' />
+      </feDiffuseLighting> -->
+         </filter>
+       </svg>
+<!-- canvas element -->
+     <canvas id="canvas1"></canvas>
+    
+
+     </body>
+
+</html>
